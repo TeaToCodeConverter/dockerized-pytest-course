@@ -6,7 +6,7 @@ tags:
 
 # Unit Testing using Python
 
-## Overview of Test-Driven Development and Pytest Features
+## 2. Overview of Test-Driven Development and Pytest Features
 
 ### Exceptions Challenge
 
@@ -35,3 +35,21 @@ tags:
 >> - halt the flow of code execution and throw and exception
 >> - gracefully log an exception that an action could not be taken and continue the code execution; ideally this should be shown to the user
 
+## 3. Test Automation with Fixtures and Parametrization
+
+### Fixtures to amortize costly operation's
+
+- automate test setup and teardown
+- Comes in handy when tests use costly operation, such as database or API contention
+- Can be scoped to execute at different times in your set suite
+
+#### Scoping Fixtures 
+
+- ``@pytest.fixture(scope = 'session')``
+    - Once per session
+- ``@pytest.fixture(scope = 'module')``
+    - Once per Module
+- ``@pytest.fixture(scope = 'class')``
+    - Once per class of tests
+- ``@pytest.fixture(scope = 'function')``
+    - Once per test
